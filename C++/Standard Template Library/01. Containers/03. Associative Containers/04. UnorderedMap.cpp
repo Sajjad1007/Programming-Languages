@@ -23,38 +23,48 @@ int main()
     ump.insert({5, 'd'});
     ump.insert(make_pair(3, 'c'));
     ump.insert(pair <int, char> (2, 'b'));
-    ump.insert(make_pair(3, 'd'));      //This element will not be inserted.
+    ump.insert(make_pair(3, 'd'));      // This element will not be inserted.
 
     cout << "Unordered Map :";
-    for(auto& x : ump){
+    for(auto& x : ump)
+    {
         cout << " {" << x.first << ", " << x.second << "}";
     }
     cout << '\n';
 
     auto s = ump.find(2);
-    if(s != ump.end()){
+    if(s != ump.end())
+    {
         cout << "{" << s->first << ", " << s->second << "} is found" << '\n';
     }
-    else cout << "Key is not found" << '\n';
+    else
+    {
+        cout << "Key is not found" << '\n';
+    }
 
     unordered_multimap <int, char> ummp = {{1, 'a'}, {2, 'b'}, {3, 'c'}};
     ummp.insert({5, 'd'});
     ummp.insert(make_pair(3, 'c'));
     ummp.insert(pair <int, char> (2, 'b'));
-    ummp.insert(make_pair(3, 'd'));     //This element will be inserted.
+    ummp.insert(make_pair(3, 'd'));     // This element will be inserted.
 
-    //Similar numbers will be printed together because they are in same buckets.
+    // Similar numbers will be printed together because they are in same buckets.
     cout << "\nUnordered multiMap :";
-    for(auto& x : ummp){
+    for(auto& x : ummp)
+    {
         cout << " {" << x.first << ", " << x.second << "}";
     }
     cout << '\n';
 
     s = ummp.find(4);
-    if(s != ummp.end()){
+    if(s != ummp.end())
+    {
         cout << "{" << s->first << ", " << s->second << "} is found" << '\n';
     }
-    else cout << "Key 4 is not found" << '\n';
+    else
+    {
+        cout << "Key 4 is not found" << '\n';
+    }
 
     cout << "\nNumber of 3s = " << ummp.count(3) << '\n';
     return 0;

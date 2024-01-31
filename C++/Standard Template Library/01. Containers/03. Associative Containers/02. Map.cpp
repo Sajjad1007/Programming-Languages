@@ -27,7 +27,8 @@ int main()
     mp.insert(make_pair("Bot", 789));
 
     cout << "**Strings can be used as key**\n\n";
-    for(auto& x : mp){
+    for(auto& x : mp)
+    {
         cout << x.first << " " << x.second << '\n';
     }
     cout << '\n';
@@ -40,16 +41,18 @@ int main()
     mmp.insert(make_pair('b', 5));
 
     cout << "\n**A key can map to multiple elements in a multimap**\n\n";
-    for(auto& x : mmp){
+    for(auto& x : mmp)
+    {
         cout << x.first << " " << x.second << '\n';
     }
 
     cout << "\nNumber of elements mapped by a = " << mmp.count('a') << '\n';
-    //getting all the pairs of given key
-    auto range = mmp.equal_range('a');            //equal_range() function returns a pair of two iterators.
-    //range.first holds address of the first value of 'a'.
-    //range.second holds address of the last value of 'a'.
-    for(auto it = range.first; it != range.second; ++it){
+    // Getting all the pairs of given key
+    auto range = mmp.equal_range('a');            // Equal_range() function returns a pair of two iterators.
+    // Range.first holds address of the first value of 'a'.
+    // Range.second holds address of the last value of 'a'.
+    for(auto it = range.first; it != range.second; ++it)
+    {
         cout << it->first << " " << it->second << '\n';
     }
     return 0;

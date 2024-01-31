@@ -20,20 +20,28 @@ int main()
     vector <int> vec = {1, 8, 5, 6, 3, 4, 0, 9, 7, 2};
 
     priority_queue <int> pq;
-    for(int x : vec) pq.push(x);
+    for(int x : vec)
+    {
+        pq.push(x);
+    }
 
     cout << "Priority queue in descending order :";
-    while(!pq.empty()){       //We cannot iterate over a priority queue.
+    while(!pq.empty())        // We cannot iterate over a priority queue.
+    {
         cout << " " << pq.top();
         pq.pop();
     }
     cout << '\n';
 
     priority_queue <int, deque <int>, std :: greater <int>> qq;
-    for(int x : vec) qq.push(x);
+    for(int x : vec)
+    {
+        qq.push(x);
+    }
 
     cout << "Priority queue in  ascending order :";
-    while(!qq.empty()){
+    while(!qq.empty())
+    {
         cout << " " << qq.top();
         qq.pop();
     }

@@ -21,7 +21,8 @@ using namespace std;
 
 void print_forward_list(forward_list <int> list)
 {
-    for(auto& x : list){
+    for(auto& x : list)
+    {
         cout << " " << x;
     }
     cout << '\n';
@@ -41,18 +42,19 @@ int main()
     cout << "List 2 :";
     print_forward_list(list2);
 
-    list1.sort(); //list1 = {2, 4, 5, 6, 8}
-    list2.sort(); //list2 = {0, 0, 0, 1, 6, 7, 9}
+    list1.sort();                  // list1 = {2, 4, 5, 6, 8}
+    list2.sort();                  // list2 = {0, 0, 0, 1, 6, 7, 9}
     list1.merge(list2);
     cout << "\nList 1 merge  List 2 :";
-    print_forward_list(list1); //list2 is empty.
+    print_forward_list(list1);     // list2 is empty.
 
     list <int> list3 = {5, 2, 4, 6};
     list <int> list4 = {7, 6, 1, 9};
     list3.splice(list3.begin(), list4);
 
     cout << "List 3 splice List 4 :";
-    for(auto& x : list3){
+    for(auto& x : list3)
+    {
         cout << " " << x;
     }
     cout << '\n';

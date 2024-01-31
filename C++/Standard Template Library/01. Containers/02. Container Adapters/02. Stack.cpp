@@ -17,8 +17,9 @@ using namespace std;
 
 void print_stack(stack <int> s)
 {
-    //We cannot iterate over a stack.
-    while(!s.empty()){
+    // We cannot iterate over a stack.
+    while(!s.empty())
+    {
         cout << " " << s.top();
         s.pop();
     }

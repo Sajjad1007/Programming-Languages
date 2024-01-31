@@ -15,8 +15,9 @@ using namespace std;
 
 void print_queue(queue <int> q)
 {
-    //We cannot iterate over a queue.
-    while(!q.empty()){
+    // We cannot iterate over a queue.
+    while(!q.empty())
+    {
         cout << " " << q.front();
         q.pop();
     }

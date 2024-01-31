@@ -3,8 +3,8 @@
 using namespace std;
 
 template <typename T>
-class Rectangle{
-
+class Rectangle
+{
 private:
     T length;
     T breadth;
@@ -18,10 +18,11 @@ public:
 
     Rectangle(T length, T breadth)
     {
-        if(length < breadth){
-            length = length + breadth;
-            breadth = length - breadth;
-            length = length - breadth;
+        if(length < breadth)
+        {
+            length += breadth;
+            breadth -= breadth;
+            length -= breadth;
         }
         this->length = length;
         this->breadth = breadth;
@@ -37,7 +38,10 @@ public:
 
     void set_length(T length)
     {
-        if(length < breadth) return;
+        if(length < breadth)
+        {
+            return;
+        }
         this->length = length;
     }
 
@@ -48,7 +52,10 @@ public:
 
     void set_breadth(T breadth)
     {
-        if(breadth > length) return;
+        if(breadth > length)
+        {
+            return;
+        }
         this->breadth = breadth;
     }
 
@@ -62,13 +69,13 @@ public:
 template <typename T>
 T Rectangle <T> :: area()
 {
-    return length * breadth;
+    return length*breadth;
 }
 
 template <typename T>
 T Rectangle <T> :: perimeter()
 {
-    return 2 * (length + breadth);
+    return 2*(length+breadth);
 }
 
 int main()

@@ -15,7 +15,8 @@ using namespace std;
 
 void print_vector(vector <int> vec)
 {
-    for(auto& x : vec){
+    for(auto& x : vec)
+    {
         cout << " " << x;
     }
     cout << '\n';
@@ -24,21 +25,21 @@ void print_vector(vector <int> vec)
 
 int main()
 {
-    //declaration
+    // Declaration
     vector <int> vec1;
     vec1.reserve(100);
 
-    //initialization
-    vector <int> vec2(5, 1);                      //(size, value)
-    vector <int> vec3 = {0, 1, 2, 3, 4};          //initializer list
-    vector <int> vec4 {5, 6, 7, 8, 9};            //uniform initialization
+    // Initialization
+    vector <int> vec2(5, 1);                      // (size, value)
+    vector <int> vec3 = {0, 1, 2, 3, 4};          // Initializer list
+    vector <int> vec4 {5, 6, 7, 8, 9};            // Uniform initialization
 
-    //assigning values using initializer list
+    // Assigning values using initializer list
     vec1 = {2, 3, 4, 5, 6};
 
-    //accessing elements
-    vec2.at(3) = 0;           //exception safe
-    vec2[3] = 0;              //not exception safe, show garbage value if IndexOutOfBoundException occurs
+    // Accessing elements
+    vec2.at(3) = 0;           // Exception safe
+    vec2[3] = 0;              // Not exception safe, show garbage value if IndexOutOfBoundException occurs
 
     cout << "Vector 1 :";
     print_vector(vec1);

@@ -17,7 +17,8 @@ using namespace std;
 
 void print_array(array <int, 5> arr)
 {
-    for(auto& x : arr){
+    for(auto& x : arr)
+    {
         cout << " " << x;
     }
     cout << '\n';
@@ -26,14 +27,14 @@ void print_array(array <int, 5> arr)
 
 int main()
 {
-    //declaration
+    // Declaration
     array <int, 5> arr1;
 
-    //initialization
-    array <int, 5> arr2 = {0, 1, 2, 3, 4};        //initializer list
-    array <int, 5> arr3 {5, 6, 7, 8, 9};          //uniform initialization
+    // Initialization
+    array <int, 5> arr2 = {0, 1, 2, 3, 4};        // Initializer list
+    array <int, 5> arr3 {5, 6, 7, 8, 9};          // Uniform initialization
 
-    //assigning values using initializer list
+    // Assigning values using initializer list
     arr1 = {2, 3, 4, 5, 6};
 
     cout << "Array 1 :";

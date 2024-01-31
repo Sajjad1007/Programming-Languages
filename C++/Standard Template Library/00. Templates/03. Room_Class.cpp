@@ -2,8 +2,8 @@
 
 using namespace std;
 
-class Room{
-
+class Room
+{
 private:
     double length;
     double width;
@@ -26,12 +26,12 @@ public:
 
     double area()
     {
-        return length * width;
+        return length*width;
     }
 
     double volume()
     {
-        return length * width * height;
+        return length*width*height;
     }
 
     double get_length()
@@ -51,19 +51,28 @@ public:
 
     void set_length(double length)
     {
-        if(this->length > 0) this->length = length;
+        if(this->length > 0)
+        {
+            this->length = length;
+        }
         return;
     }
 
     void set_width(double width)
     {
-        if(this->width > 0) this->width = width;
+        if(this->width > 0)
+        {
+            this->width = width;
+        }
         return;
     }
 
     void set_height(double height)
     {
-        if(this->height > 0) this->height = height;
+        if(this->height > 0)
+        {
+            this->height = height;
+        }
         return;
     }
 
@@ -71,9 +80,9 @@ public:
 
 int main()
 {
-    Room room1;                         //In C++, objects does not need to be initialized using new.
-    Room room2(2, 1.5, 1.2);            //A variable has been initialized, not a pointer.
-    Room room3 = room2;                 //Value of the object has been copied, not address.
+    Room room1;                         // In C++, objects does not need to be initialized using new.
+    Room room2(2, 1.5, 1.2);            // A variable has been initialized, not a pointer.
+    Room room3 = room2;                 // Value of the object has been copied, not address.
     Room *room4 = new Room(5, 4, 3);
     Room *room5 = room4;
 

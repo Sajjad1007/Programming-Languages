@@ -22,14 +22,16 @@ int main()
 {
     set <int, std :: greater <int>> st = {1, 2, 5, 4, 3, 2, 4, 1, 3, 5};
     cout << "Set :";
-    for(auto& x : st){
+    for(auto& x : st)
+    {
         cout << " " << x;
     }
     cout << '\n';
 
-    multiset <int> mst = {1, 2, 5, 4, 3, 2, 4, 1, 3, 5};    //default orderOfSorting : less
+    multiset <int> mst = {1, 2, 5, 4, 3, 2, 4, 1, 3, 5};    // Default orderOfSorting : less
     cout << "Multiset :";
-    for(auto& x : mst){
+    for(auto& x : mst)
+    {
         cout << " " << x;
     }
     cout << '\n';

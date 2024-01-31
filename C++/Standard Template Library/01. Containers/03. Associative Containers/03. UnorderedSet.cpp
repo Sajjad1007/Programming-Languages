@@ -21,29 +21,39 @@ int main()
 {
     unordered_set <int> ust = {4, 1, 2, 3, 9, 4, 3, 2, 9, 8};
     cout << "Unordered set :";
-    for(auto& x : ust){
+    for(auto& x : ust)
+    {
         cout << " " << x;
     }
     cout << '\n';
 
     auto s = ust.find(2);
-    if(s != ust.end()){
+    if(s != ust.end())
+    {
         cout << (*s) << " is found" << '\n';
     }
-    else cout << "Element is not found" << '\n';
+    else
+    {
+        cout << "Element is not found" << '\n';
+    }
 
     unordered_multiset <int> umst = {4, 1, 2, 3, 9, 4, 3, 2, 9, 8};
-    //Similar numbers will be printed together because they are in same buckets.
+    // Similar numbers will be printed together because they are in same buckets.
     cout << "\nUnordered multiSet :";
-    for(auto& x : umst){
+    for(auto& x : umst)
+    {
         cout << " " << x;
     }
 
     s = umst.find(6);
-    if(s != umst.end()){
+    if(s != umst.end())
+    {
         cout << (*s) << " is found" << '\n';
     }
-    else cout << "\n6 is not found" << '\n';
+    else
+    {
+        cout << "\n6 is not found" << '\n';
+    }
 
     cout << "\nNumber of 4s = " << umst.count(4) << '\n';
     return 0;

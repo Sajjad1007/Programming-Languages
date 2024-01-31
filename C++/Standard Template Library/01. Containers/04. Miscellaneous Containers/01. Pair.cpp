@@ -25,10 +25,11 @@ int main()
     vp.push_back(make_pair("Nabil", 30));
     vp.push_back(make_pair("Nasif", 28));
     vp.push_back(pair <string, int> ("Taha", 22));
-    vp.push_back(make_pair("Zainab", 30));
+    vp.push_back(make_pair("Zainab", 12));
 
     cout << "Pairs are :\n\n";
-    for(auto& x : vp){
+    for(auto& x : vp)
+    {
         print_pair(x);
     }
     return 0;
@@ -40,5 +41,5 @@ Pairs are :
 Nabil 30
 Nasif 28
 Taha 22
-Zainab 30
+Zainab 12
 */

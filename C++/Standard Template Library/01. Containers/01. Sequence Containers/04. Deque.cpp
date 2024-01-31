@@ -23,7 +23,8 @@ using namespace std;
 
 void print_deque(deque <int> dq)
 {
-    for(auto& x : dq){
+    for(auto& x : dq)
+    {
         cout << " " << x;
     }
     cout << '\n';

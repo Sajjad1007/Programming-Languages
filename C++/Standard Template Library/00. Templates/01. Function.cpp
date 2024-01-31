@@ -30,11 +30,11 @@ void fun(T const& a, T const& b, T const& c)
 int main()
 {
     cout << "Function calls\n";
-    //calling max() function of current scope
+    // Calling max() function of current scope
     cout << "\nfun(10.0, 20.0) => ";
     :: fun(10.0, 20.0);
 
-    //deducing data type from parameter list
+    // Deducing data type from parameter list
     cout << "\nfun(\'a\', \'b\') => ";
     :: fun('a', 'b');
 
@@ -45,7 +45,7 @@ int main()
     :: fun <> (10, 20);
 
     cout << "\nfun <double> (10, 20) => ";
-    //explicit mention of data type
+    // Mentioning data type explicitly
     :: fun <double> (10, 20);
 
     cout << "\nfun(10, 20, 30) => ";
